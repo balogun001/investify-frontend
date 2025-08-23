@@ -18,19 +18,17 @@ const config: Config = {
           50: '#ECFDF3',
           700: '#027A48',
         },
-        orange: {
-          900: '#E45F01',
-          800: '#FE791B',
-          700: '#FE974D',
-          400: '#FFD2B3',
-          50: '#FFF0E6',
+        blue: {
+          100: '#D0EFF1',
+          800: '#120B1C',
         },
-        purple: {
-          50: '#D4DBF7',
+        green: {
+          50: '#D0EFF1',
           100: '#F2F4FD',
-          300: '#A9B7EF',
-          600: '#605EED',
-          700: '#4F4DCB',
+          300: '#D1F906',
+          600: '#97D38C',
+          700: '#4D9275',
+          800: '#209124',
         },
         gray: {
           50: '#F1F1F1',
@@ -39,8 +37,8 @@ const config: Config = {
           300: '#E8E8E8',
           500: '#828282',
           600: '#696969',
-          700: '#363636',
-          900: '#101828',
+          700: '#102028',
+          900: '#120B1C',
         },
         red: {
           50: '#FEF3F2',
@@ -68,6 +66,11 @@ const config: Config = {
     variants: {
       extend: {
         borderColor: ['focus'], // Enable borderColor on focus state
+      },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        bebas: ['var(--font-bebas)'],
       },
     },
     plugins: [tailwindScrollbar],
