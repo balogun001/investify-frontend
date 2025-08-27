@@ -7,6 +7,13 @@ import { useEffect, useState } from 'react';
 import { HiMenuAlt4 } from 'react-icons/hi';
 import { InvestifyLogo } from 'src/assets/icons';
 
+const navLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'About Us', href: '/about-us' },
+  { name: 'Products', href: '/products' },
+  { name: 'Contact', href: '/contact' },
+];
+
 function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -32,36 +39,23 @@ function Header() {
           <InvestifyLogo className="text-9xl" />
         </Link>
         <div className="lg:flex space-x-6 max-lg:hidden">
-          {/* <Link href={Pages.homePage}> */}
-          <span className="transition-all duration-500 ease-in-out mt-1 hover:text-orange-700">
-            Home
-          </span>
-          {/* </Link> */}
-
-          {/* <Link href={Pages.bookings}> */}
-          <span className="transition-all duration-500 ease-in-out mt-1 hover:text-orange-700">
-            About Us
-          </span>
-          {/* </Link> */}
-          {/* <Link href={Pages.hostPeople}> */}
-          <span className="transition-all duration-500 ease-in-out mt-1 hover:text-orange-700">
-            Products
-          </span>
-          {/* </Link> */}
-          {/* <Link href={Pages.hostPeople}> */}
-          <span className="transition-all duration-500 ease-in-out mt-1 hover:text-orange-700">
-            Contact
-          </span>
+          {navLinks.map((link) => (
+            <Link key={link.name} href={link.href}>
+              <span className="transition-transform duration-300 ease-in-out mt-1 hover:-translate-y-1 hover:opacity-80 cursor-pointer">
+                {link.name}
+              </span>
+            </Link>
+          ))}
           {/* </Link> */}
           <span className="bg-white h-8 w-[1px]" />
           {/* <Link href={Pages.hostPeople}> */}
-          <Button kinds="secondary" size="md">
+          <Button kinds="normal" size="md">
             Login
           </Button>
           {/* </Link> */}
         </div>
         <span className="lg:hidden" onClick={toggleSidebar}>
-          <HiMenuAlt4 className="text-green-300 text-3xl" />
+          <HiMenuAlt4 className="text-green-300 text-3xlz" />
         </span>
 
         <div className="lg:flex items-center text-p2 space-x-4 max-lg:hidden">

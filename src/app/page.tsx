@@ -58,7 +58,7 @@ export default function Home() {
                 </div>
                 <BodyText>Trusted by 25,000+ traders worldwide</BodyText>
               </div>
-              <div className="bg-green-50 w-64 rounded-lg p-4 flex flex-col justify-between">
+              <div className="bg-green-700 w-64 rounded-lg p-4 flex flex-col justify-between text-white">
                 <div className="min-h-11 flex justify-between items-start">
                   <BodyText className="text-h2">4.5 star</BodyText>
                   <ShieldIcon />

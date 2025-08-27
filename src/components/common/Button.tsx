@@ -19,9 +19,9 @@ const buttonStyle = cva(
     variants: {
       block: { true: '!w-full' },
       kinds: {
-        normal: 'border-none hover:opacity-70',
+        normal: 'bg-white text-black hover:opacity-70',
         primary: 'bg-green-300 text-black hover:bg-opacity-80 shadow-sm',
-        secondary: 'bg-white text-black hover:opacity-70',
+        secondary: 'bg-gray-700 text-green-300 hover:opacity-70',
       },
       rounded: {
         true: '!rounded-full',
